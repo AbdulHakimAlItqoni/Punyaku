@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hallo Hakim</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', Arial, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 40px;
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ff512f, #dd2476, #24c6dc, #514a9d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      color: #fff;
+      background: linear-gradient(90deg, #36d1dc, #5b86e5);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery {
+      margin-top: 30px;
+      display: none;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>HALLO HAKIM</h1>
+    <button onclick="toggleGallery()">LIAT MASA LALU</button>
+
+    <div class="gallery" id="gallery">
+      <!-- Ganti src dengan foto-foto masa lalu kamu -->
+      <img src="foto1.JPG" alt="Kenangan 1" />
+      <img src="foto2.JPG" alt="Kenangan 2" />
+      <img src="foto3.JPG" alt="Kenangan 3" />
+      <img src="foto4.JPG" alt="Kenangan 4" />
+    </div>
+  </div>
+
+  <script>
+    function toggleGallery() {
+      const gallery = document.getElementById('gallery');
+      if (gallery.style.display === 'grid') {
+        gallery.style.display = 'none';
+      } else {
+        gallery.style.display = 'grid';
+      }
+    }
+  </script>
+</body>
+</html>
